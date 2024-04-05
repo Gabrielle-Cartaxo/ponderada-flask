@@ -22,4 +22,4 @@ Após clonar esse projeto, abra ele no VScode ou no cmd.
 
 ## Vídeo de demonstração
 
-Acesse o vídeo de demonstração (aqui!)[https://www.youtube.com/watch?v=wt2zFk3a87s]
+Acesse o vídeo de demonstração [aqui!](https://www.youtube.com/watch?v=wt2zFk3a87s)
