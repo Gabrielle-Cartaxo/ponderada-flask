@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.11"></script>
+    <title>Log de movimentação</title>
+</head>
+<body>
+    <h1>Log de movimentação</h1>
+    <div class="div_log">
+
+        <div hx-get="/conexao" hx-target="#teste" hx-trigger="every 2s"></div>
+        <div id="teste"></div>
+
+        <table class="tabela">
+            <tr>
+                <th>Data e hora:</th>
+                <th>x:</th>
+                <th>y:</th>
+                <th>z:</th>
+            </tr>
+            {%for log in log_db%}
+            <tr>
+                <td>{{log['tempo']}}</td>
+                <td>{{log['X']}}</td>
+                <td>{{log['Y']}}</td>
+                <td>{{log['Z']}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+
+        <a href="http://localhost:8000/">Mover o robô</a>
+
+    </div>
+
+</body>
+</html>

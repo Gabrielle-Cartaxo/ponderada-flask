@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.11"></script>
+    <title>Controle do robô</title>
+</head>
+
+
+<body>
+    <div class="div_movimentacao">
+        <h1>Mover o robôzin</h1>
+
+        <div hx-get="/conexao" hx-target="#teste" hx-trigger="load"></div>
+        <div id="teste"></div>
+
+
+
+        <p>Coloque as coordenadas abaixo:</p>
+
+        <form hx-post="/mover" hx-target="#resposta">
+            <input type="text" class="form_input" name="x" placeholder="x"><br>
+            
+            <input type="text" class="form_input" name="y" placeholder="y"><br>
+            
+            <input type="text" class="form_input" name="z" placeholder="z"><br>
+
+            <button type="submit" class="botao">Enviar</button>
+        </form>
+        
+        <a href="http://localhost:8000/logs">Veja os logs</a> 
+        
+    </div>
+
+    <div id="resposta"></div>
+
+
+</body>
+
+
+</html>
